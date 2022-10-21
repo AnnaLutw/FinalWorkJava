@@ -6,10 +6,10 @@ Objetivo de programa
 Programadores
 	Ana Luiza De Sousa Silva
 	Ricardo Cardoso Alencar
-	Gustavo Lara MarÁal
+	Gustavo Lara Mar√ßal
 	
 Data de escrita: 22/06/2022
-Data da ultima AtualizaÁ„o: 01/06/2022
+Data da ultima Atualiza√ß√£o: 01/07/2022
 
 */
 
@@ -27,8 +27,8 @@ public class trabalhoFinal {
 	static int[][] estoque = new int[4][4];
 
 	public static boolean temEstoque(int[][] estoque, int variavel) { // metodo que verifica com boolean se o produto
-																		// est· em
-																		// estoque ou n„o e da o return
+																		// est√° em
+																		// estoque ou n√£o e da o return
 		boolean temEstoque;
 
 		if (estoque[variavel][0] > 0) {
@@ -44,7 +44,7 @@ public class trabalhoFinal {
 		int venda, i = 1;
 
 		while (i == 1) {
-			// o cliente escolhe se deseja fazer uma compra ou n„o
+			// o cliente escolhe se deseja fazer uma compra ou n√£o
 			System.out.println(
 					"Esolha qual mascara deseja comprar:\n 0-Infantil lisa\n 1- intantil com estampa\n 2- adulto lisa"
 							+ "\n 3- adulto com estampa ");
@@ -55,9 +55,9 @@ public class trabalhoFinal {
 				estoque[venda][0] = estoque[venda][0] - 1;
 				System.out.println("Produto vendido");
 				estoque[venda][3] += 1;
-				System.out.println("Agora a quantidade de mascara " + venda + " em estoque È de: " + estoque[venda][0]);
+				System.out.println("Agora a quantidade de mascara " + venda + " em estoque √© de: " + estoque[venda][0]);
 			} else {
-				System.out.println("Produto n„o est· disponivel no estoque");
+				System.out.println("Produto n√£o est√° disponivel no estoque");
 			}
 
 			System.out.println("Digite 1 caso queira fazer com nova compra, ou 0 caso queira parar de comprar");
@@ -112,17 +112,17 @@ public class trabalhoFinal {
 	private static void relarioEstoque() { 
 		try {
 			//imprimindo o relatorio
-			System.out.println("O estoque de mascaras infantil lisa È: " + estoque[0][0]
-					+ " \nO estoque de mascaras infantil estampada È: " + estoque[1][0]
-					+ " \nO estoque de mascaras adulto lisa È: " + estoque[2][0]
-					+ " \nO estoque de mascaras adulto estampada È: " + estoque[3][0]);
+			System.out.println("O estoque de mascaras infantil lisa √©: " + estoque[0][0]
+					+ " \nO estoque de mascaras infantil estampada √©: " + estoque[1][0]
+					+ " \nO estoque de mascaras adulto lisa √©: " + estoque[2][0]
+					+ " \nO estoque de mascaras adulto estampada √©: " + estoque[3][0]);
 			
 			//enviando relatorio para arquivo
 			FileWriter relatorios = new FileWriter("C:\\temp\\relatorioEstoque.txt");
-			relatorios.write("O estoque de mascaras infantil lisa È: " + estoque[0][0]
-					+ " \nO estoque de mascaras infantil estampada È: " + estoque[1][0]
-					+ " \nO estoque de mascaras adulto lisa È: " + estoque[2][0]
-					+ " \nO estoque de mascaras adulto estampada È: " + estoque[3][0]);
+			relatorios.write("O estoque de mascaras infantil lisa √©: " + estoque[0][0]
+					+ " \nO estoque de mascaras infantil estampada √©: " + estoque[1][0]
+					+ " \nO estoque de mascaras adulto lisa √©: " + estoque[2][0]
+					+ " \nO estoque de mascaras adulto estampada √©: " + estoque[3][0]);
 			relatorios.close();
 		} catch (IOException e) {
 			System.out.println("Invalido");
@@ -162,11 +162,11 @@ public class trabalhoFinal {
 			e.printStackTrace();
 		}
 	}
-		//metodo para inicializar as varivaies e ler o arquivo com os dados de estoque, preÁo de compra e preÁo de venda
+		//metodo para inicializar as varivaies e ler o arquivo com os dados de estoque, pre√ßo de compra e pre√ßo de venda
 	private static Scanner inicializar() throws IOException {
 		
-		//as linhas s„o : 0 = infantil lisa, 1 = infantil estampada, 2 = adulta lisa, 3 = adulta estampada
-		//as colunas s„o quantida de estoque, preÁo de custo, preÁo de venda e total de vendas que vai somar sempre que tiver uma
+		//as linhas s√£o : 0 = infantil lisa, 1 = infantil estampada, 2 = adulta lisa, 3 = adulta estampada
+		//as colunas s√£o quantida de estoque, pre√ßo de custo, pre√ßo de venda e total de vendas que vai somar sempre que tiver uma
 		//nova compra
 		estoque[0][3] = 0;
 		estoque[1][3] = 0;
